@@ -81,5 +81,5 @@ def readCollumns():
 
 #Begin Main Loop
 while True:
-    readCollumns()
     poweredRowCycle()
+    readCollumns()
