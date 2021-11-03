@@ -1,5 +1,4 @@
 from machine import Pin as pin 
-from time import sleep_ms
 
 bounceThreshold = 5
 
