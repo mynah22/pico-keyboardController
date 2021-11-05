@@ -1,21 +1,10 @@
 import board
 from digitalio import DigitalInOut, Direction, DriveMode, Pull
 from adafruit_hid.keyboard import Keyboard
-from adafruit_hid.keycode import Keycode
+from keycodes import *
 from usb_hid import devices
 kb=Keyboard(devices)
 
-#keycode aliases
-ALT=Keycode.ALT
-TAB=Keycode.TAB
-THREE=Keycode.THREE
-FOUR=Keycode.FOUR
-FIVE=Keycode.FIVE
-SIX=Keycode.SIX
-SEVEN=Keycode.SEVEN
-EIGHT=Keycode.EIGHT
-NINE=Keycode.NINE
-#end keycode aliases
 
 #"row" (output) pins and related variables set up 
 r0pin = DigitalInOut(board.GP28); r0pin.direction = Direction.OUTPUT; r0pin.drive_mode = DriveMode.OPEN_DRAIN
@@ -103,6 +92,7 @@ def readCollumns():
         currentCollumn += 1
 #print('loaded')
 #Begin Main Loop
+print(dir())
 while True:
     poweredRowCycle()
     readCollumns()
