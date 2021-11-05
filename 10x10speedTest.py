@@ -3,7 +3,7 @@ from digitalio import DigitalInOut, Direction, DriveMode, Pull
 from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 from usb_hid import devices
-from time import monotonic
+from time import monotonic, time
 bounceThreshold = 3
 kb=Keyboard(devices)
 
@@ -127,6 +127,7 @@ def readCollumns():
 totalcycles=20000
 cycle = totalcycles
 print('loaded')
+startseconds=time()
 stime = monotonic()
 while cycle:
     poweredRowCycle()
@@ -134,3 +135,4 @@ while cycle:
     cycle -= 1
 timeelapsed=monotonic()-stime
 print(str((timeelapsed/totalcycles)*1000)+"ms / cycle, "+str(1/(timeelapsed/totalcycles))+" cycles per second")
+print(str(time()-startseconds)+" seconds elapsed")
