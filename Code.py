@@ -92,17 +92,16 @@ def readCollumns():
                     currentKey.state = readKeyStatus
                     if currentKey.state:
                         kb.press(currentKey.kcode)
-                        print(currentKey.kcode)
+#                        print(currentKey.kcode)
                     else:
                         kb.release(currentKey.kcode)
-                        print('released')
-
+#                        print('released')
         else:
             currentKey.previousState = readKeyStatus
             currentKey.changeCounter = 0
 
         currentCollumn += 1
-print('loaded')
+#print('loaded')
 #Begin Main Loop
 while True:
     poweredRowCycle()
