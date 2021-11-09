@@ -8,12 +8,14 @@ from kmk.matrix import DiodeOrientation
 
 keyboard = KMKKeyboard()
 
-keyboard.col_pins = (board.GP0, board.GP1, board.GP2)
-keyboard.row_pins = (board.GP28, board.GP27, board.GP26)
+keyboard.row_pins = (board.GP0, board.GP1, board.GP2)
+keyboard.col_pins = (board.GP28, board.GP27, board.GP26)
 keyboard.diode_orientation = DiodeOrientation.COL2ROW
 
 keyboard.keymap = [
-    [KC.A, KC.B, KC.C, KC.X, KC.Y, KC.Z, KC.D, KC.E, KC.F,],
+    [KC.N1, KC.N4, KC.N7,
+     KC.N2, KC.N5, KC.N8, 
+     KC.N3, KC.N6, KC.N9,],
 ]
 
 if __name__ == '__main__':
