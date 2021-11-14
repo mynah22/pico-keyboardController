@@ -1,3 +1,9 @@
+import supervisor
+
+supervisor.set_next_stack_limit(4096 + 4096)
+
+
+####   My boot.py : disable midi, repl and mass storage unless button pressed
 from usb_midi import disable as mididisable
 from usb_cdc import disable as consoledisable
 from digitalio import DigitalInOut, Direction, DriveMode, Pull
