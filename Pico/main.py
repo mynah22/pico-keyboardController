@@ -25,9 +25,9 @@ MOD = KC.MO(1)
 #|__?___||_TAB______||__Q___||__W___||__E___||__R___||__T___||__Y___||__U___||__I___||__O___||__P___||_LBRC_||_RBRC_||_BSLASH___||_DEL__|
 #|__?___||_BKSP_______||__A___||__S___||__D___||__F___||__G___||__H___||__J___||__K___||__L___||SCOLON||_QUOTE|.|______ENTER____||_VOLU_|
 #|__?___||_LSHIFT_________|.|__Z___||__X___||__C___||__V___||__B___||__N___||__M___||_COMMA||_DOT__||_SLASH|  |_RSHIFT|  |__UP__||_VOLD_|
-#|__?___||_LCTRL__||_LWIN___||_LALT___||......||......||......||_SPACE||......||......||......||__?___||_RCTRL|  |_LEFT_||_DOWN_||_RIGHT|
+#|__?___||_LCTRL__||_LWIN___||_LALT___||......||......||......||_SPACE||......||......||......||_RCTRL||LAYER1|  |_LEFT_||_DOWN_||_RIGHT|
 #Layer 1
-#|......||_TILDE||______||______||______||______||______||______||______||______||______||______||______||______||______________||______|
+#|......||_TILDE||______||______||______||______||______||______||______||______||______||______||______||______||______________||_PLAY_|
 #|______||__________||______||______||______||______||______||______||______||______||______||______||______||______||__________||______|
 #|______||_CAPS_______||______||______||______||______||______||______||______||______||______||______||______|.|_______________||______|
 #|______||________________|.|______||______||______||______||______||______||______||______||______||______|  |_______|  |_PGUP_||______|
@@ -47,7 +47,7 @@ keyboard.keymap = [
      UNASS, KC.LSHIFT, NOKEY, KC.Z, KC.X, KC.C, KC.V, KC.B, KC.N, KC.M, KC.COMMA, KC.DOT, KC.SLASH, KC.RSHIFT, KC.UP, KC.VOLD,
      UNASS, KC.LCTRL, KC.LWIN, KC.LALT, NOKEY, NOKEY, NOKEY, KC.SPACE, NOKEY, NOKEY, NOKEY, KC.RCTRL, KC.MO(1), KC.LEFT, KC.DOWN, KC.RIGHT, 
     ],
-    [NOKEY, KC.GRAVE, KC.F1, KC.F2, KC.F3, KC.F4, KC.F5, KC.F6, KC.F7, KC.F8, KC.F9, KC.F10, KC.F11, KC.F12, UNASS, UNASS,
+    [NOKEY, KC.GRAVE, KC.F1, KC.F2, KC.F3, KC.F4, KC.F5, KC.F6, KC.F7, KC.F8, KC.F9, KC.F10, KC.F11, KC.F12, UNASS, KC.MPLY,
      UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS,
      UNASS, KC.CAPS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, NOKEY, UNASS, UNASS,
      UNASS, UNASS, NOKEY, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, UNASS, KC.PGUP, UNASS,
