@@ -1,12 +1,16 @@
 print("Starting")
 
 import board
+from digitalio import DigitalInOut, Direction
 
 from kmk.kmk_keyboard import KMKKeyboard
 from kmk.keys import KC
 from kmk.matrix import DiodeOrientation
 from kmk.extensions.media_keys import MediaKeys
 from kmk.modules.layers import Layers
+
+onlight=DigitalInOut(board.LED)
+onlight.direction=Direction.OUTPUT
 
 keyboard = KMKKeyboard()
 keyboard.extensions.append(MediaKeys())
@@ -62,4 +66,5 @@ keyboard.keymap = [
 ]
 
 if __name__ == '__main__':
+    onlight.value=1
     keyboard.go()
